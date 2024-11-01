@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação JS</title>
+    <link rel="stylesheet" text="text/css" href="css/style.css">
+    <script src="js/style.js"></script>
+</head>
+<body>
+
+    <div>
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" name="curso"><br><br>
+                <label for="ano">Conclusão:</label>
+                <input type="text" id="ano" name="ano"><br><br>
+                <input type="button" value="Enviar" id="bottom" onclick="insertData()">
+                <input type="button" value="Consultar" id="bottom" onclick="ViewAllData()">
+                <input type="button" value="Atualizar" id="bottom" onclick="AtualizarDados()">
+                <input type="button" value="Remover" id="bottom" onclick="DeleteData()">
+            </fieldset>
+        </form>
+    </div>
+
+    <p id="resultado"></p>
+
+</body>
+</html>
