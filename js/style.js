@@ -2,6 +2,7 @@
 
 let chave = "Nome 1";
 let chave2 = "Curso 1";
+let chave3 = "Ano";
 let i = 0;
 
 function ArmazenarDados()
@@ -31,7 +32,7 @@ function AtualizarDados()
 {
     localStorage.setItem(chave, document.getElementById("nome").value);
     localStorage.setItem(chave2, document.getElementById("curso").value);
-    localStorage.setItem(chave2, document.getElementById("ano").value);
+    localStorage.setItem(chave3, document.getElementById("ano").value);
     LimparCampos();
 }
 
@@ -51,6 +52,7 @@ function ViewAllData()
     {
         resultado += localStorage.getItem("Nome " + indice) + " - " +  
         localStorage.getItem("Curso " + indice ) + " - " + localStorage.getItem("ano " + indice );
+        "<br>";
     }
 
     document.getElementById("resultado").innerHTML = resultado;
@@ -60,5 +62,6 @@ function DeleteData()
 {
     localStorage.removeItem("Nome " + document.getElementById("ano").value);
     localStorage.removeItem("Curso " + document.getElementById("curso").value);
-    document.getElementById("ano").value = "";
+    localStorage.removeItem("ano " + document.getElementById("ano").value);
+    
 }
