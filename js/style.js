@@ -8,6 +8,7 @@ function ArmazenarDados()
 {
     localStorage.setItem(chave, document.getElementById("nome").value);
     localStorage.setItem(chave2, document.getElementById("curso").value);
+    localStorage.setItem(chave3, document.getElementById("ano").value);
     LimparCampos();
 }
 
@@ -23,12 +24,14 @@ function LimparCampos()
 {
     document.getElementById("nome").value = "";
     document.getElementById("curso").value = "";
+    document.getElementById("ano").value = "";
 }
 
 function AtualizarDados()
 {
     localStorage.setItem(chave, document.getElementById("nome").value);
     localStorage.setItem(chave2, document.getElementById("curso").value);
+    localStorage.setItem(chave2, document.getElementById("ano").value);
     LimparCampos();
 }
 
@@ -37,6 +40,7 @@ function insertData()
     i = i + 1;
     localStorage.setItem("Nome " + i , document.getElementById("nome").value);
     localStorage.setItem("Curso " + i, document.getElementById("curso").value);
+    localStorage.setItem("ano " + i, document.getElementById("ano").value);
     LimparCampos();
 }
 
@@ -46,7 +50,7 @@ function ViewAllData()
     for(let indice = 1; indice <= i; indice++)
     {
         resultado += localStorage.getItem("Nome " + indice) + " - " +  
-        localStorage.getItem("Curso " + indice ) + "<br>";
+        localStorage.getItem("Curso " + indice ) + " - " + localStorage.getItem("ano " + indice );
     }
 
     document.getElementById("resultado").innerHTML = resultado;
@@ -55,6 +59,6 @@ function ViewAllData()
 function DeleteData()
 {
     localStorage.removeItem("Nome " + document.getElementById("ano").value);
-    localStorage.removeItem("Curso " + document.getElementById("ano").value);
+    localStorage.removeItem("Curso " + document.getElementById("curso").value);
     document.getElementById("ano").value = "";
 }
